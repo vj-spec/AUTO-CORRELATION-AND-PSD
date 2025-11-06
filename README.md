@@ -48,25 +48,26 @@ This relationship bridges the **time-domain correlation** and **frequency-domain
 clc
 clear all; 
 t=0:0.01:2*%pi;
-x=sin(4*t) + cos(5*t); 
-subplot(3,2,1); 
-plot(x); 
+x=7*sin(2*t);
+subplot(3,2,1);
+plot(x);
 au=xcorr(x,x);
-subplot (3,2,2); 
-plot (au); 
-v=fft(au); 
+subplot(3,2,2);
+plot(au);
+v=fft(au);
 subplot(3,2,3);
-plot(abs(v)); 
-fw=fft(x); 
-subplot(3,2,4); 
-plot(fw); 
+plot(abs(v));
+fw=fft(x);
+subplot(3,2,4);
+plot(fw);
 fw2=(abs(fw)).^2;
-subplot(3,2,5); 
+subplot(3,2,5);
 plot(fw2);
 ```
 ---
 ## **Output:**
-<img width="610" height="460" alt="image" src="https://github.com/user-attachments/assets/cf6af47a-c435-4cc4-bd98-976fd0736745" />
+<img width="758" height="720" alt="image" src="https://github.com/user-attachments/assets/bb5c138f-55fa-4786-8ea3-cfb03c3b6f79" />
+
 
 ---
 
